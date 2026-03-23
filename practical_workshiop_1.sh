@@ -15,3 +15,6 @@ echo "este mensaje es secreto" > doc_no_cifrado.txt
 ls #listar archivos o mombres
 cat doc_no_cifrado.txt 
 gpg --output doc_cifrado.txt --encrypt --recipient chamorrosamy525@gmail.com doc_no_cifrado.txt #usamos el hash o correo para cifrar el documento
+gpg --out doc_no_cifrado_firmado.txt --clearsing doc_no_cifrado.txt 
+ls
+cat doc_no_cifrado_firmado.txt
