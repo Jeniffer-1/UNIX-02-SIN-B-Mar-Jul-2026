@@ -12,6 +12,6 @@ gpg --armor --export-secret-keys #para especifivar el hash de las llaves
 gpg --import SammyMicompa.asc #importar o compartir llaves 
 gpg --list-keys #listar llaves compartidas
 echo "este mensaje es secreto" > doc_no_cifrado.txt
-ls
-cat doc_no_cifrado.txt
+ls #listar archivos o mombres
+cat doc_no_cifrado.txt 
 gpg --output doc_cifrado.txt --encrypt --recipient chamorrosamy525@gmail.com doc_no_cifrado.txt #usamos el hash o correo para cifrar el documento
