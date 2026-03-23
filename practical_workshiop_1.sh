@@ -9,3 +9,5 @@ gpg --armor --export
 gpg --list-secret-keys --keyid-format=long #para listar las llaves privadas hash 
 #C970546ABAFA2BE1 
 gpg --armor --export-secret-keys #para especifivar el hash de las llaves
+gpg --import SammyMicompa.asc #importar o compartir llaves 
+gpg --list-keys 
