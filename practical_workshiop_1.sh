@@ -26,3 +26,6 @@ pinentry-program /usr/bin/pinentry-curses # este comando le dice a GPG qué prog
 gpgconf --kill gpg-agent #para reiniciar 
 export GPG_TTY=$(tty) #sirve para decirle a GPG en qué terminal (TTY) debe pedirte la contraseña
 gpg --decrypt sammy_doc_cifrado.txt #para cifrar el doc de mi compa
+gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
+ls
+cat doc_no_cifrado_firmado.txt
