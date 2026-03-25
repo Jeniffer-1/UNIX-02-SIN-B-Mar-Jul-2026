@@ -22,7 +22,7 @@ cat doc_no_cifrado_firmado.txt
 echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf #este comando me dio chatgpt para 
 #configurar gpg 
 nano ~/.gnupg/gpg-agent.conf #es para entar o crear un archivo
-pinentry-program /usr/bin/pinentry-curses # este comando escribimos dentro de configuracion
+pinentry-program /usr/bin/pinentry-curses # este comando le dice a GPG qué programa usar para pedirte la contraseña (passphrase).
 gpgconf --kill gpg-agent #para reiniciar 
 export GPG_TTY=$(tty) #sirve para decirle a GPG en qué terminal (TTY) debe pedirte la contraseña
 gpg --decrypt sammy_doc_cifrado.txt #para cifrar el doc de mi compa
