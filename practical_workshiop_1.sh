@@ -18,3 +18,11 @@ gpg --output doc_cifrado.txt --encrypt --recipient chamorrosamy525@gmail.com doc
 gpg --out doc_no_cifrado_firmado.txt --clearsing doc_no_cifrado.txt 
 ls
 cat doc_no_cifrado_firmado.txt
+#comandos que me ayudo chatgpt para solucionar el problema que tenia
+echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf #este comando me dio chatgpt para 
+#configurar gpg 
+nano ~/.gnupg/gpg-agent.conf #es para entar o crear un archivo
+pinentry-program /usr/bin/pinentry-curses # este comando escribimos dentro de configuracion
+gpgconf --kill gpg-agent #para reiniciar 
+export GPG_TTY=$(tty) #sirve para decirle a GPG en qué terminal (TTY) debe pedirte la contraseña
+gpg --decrypt sammy_doc_cifrado.txt #para cifrar el doc de mi compa
