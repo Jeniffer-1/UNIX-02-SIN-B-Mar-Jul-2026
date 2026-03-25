@@ -29,3 +29,4 @@ gpg --decrypt sammy_doc_cifrado.txt #para cifrar el doc de mi compa
 gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
 ls
 cat doc_no_cifrado_firmado.txt
+gpg --verify SammyMicompa_doc_no_cifrado_firmado.txt
