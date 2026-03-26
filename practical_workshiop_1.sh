@@ -36,3 +36,4 @@ gpg --verify sammymicompa_doc_no_cifrado_firmado_binario.txt #It is used to veri
 gpg --output firma_separada_doc_no_cifrado.sig --detach-sign doc_no_cifrado.txt #It is used to create a digital signature separate from the file.
 gpg --verify sammycompa_firma_separada_doc_no_cifrado.sig sammy_doc_no_cifrado.txt #It is used to verify a separate digital signature.
 gpg --output doc_cifrado_y_firmado.txt --encrypt --sign --recipient 23909E79DC4B0DF0 doc_no_cifrado.txt #It serves to protect a file by combining encryption and a digital signature.
+gpg --output doc_cifrado_y_firmado_descifrado_y_validado.txt --decrypt sammymicompa_doc_cifrado_y_firmado.txt #verify your digital signature
