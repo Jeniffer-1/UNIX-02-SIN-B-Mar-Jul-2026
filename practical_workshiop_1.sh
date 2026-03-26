@@ -30,3 +30,6 @@ gpg --verify SammyMicompa_doc_no_cifrado_firmado.txt #It is used to verify a dig
 gpg --edit-key chamorrosamy525gmail.com #It is used to edit and manage a GPG key.
 trust #It is used within gpg --edit-key to assign a trust level to a key.
 gpg --sign-key 23909E79DC4B0DF0 #It is used to sign the public key.
+gpg --verify SammyMicompa_doc_no_cifrado_firmado.txt #It is used to verify a digital signature made with GnuPG.
+gpg --output doc_no_cifrado_firmado_binario.txt --sign doc_no_cifrado.txt #Digitally sign the file and create
+gpg --verify sammymicompa_doc_no_cifrado_firmado_binario.txt #It is used to verify the digital signature of the file.
