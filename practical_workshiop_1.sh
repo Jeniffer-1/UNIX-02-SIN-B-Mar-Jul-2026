@@ -1,32 +1,29 @@
 uname -a
 which gpg 
-gpg --version
-gpg --full-generate-key #generar llave
-gpg --list-keys
-gpg --armor --export condorjeniffer0@gmail.com > mi_llave_publica.asc
-ls mi_llave_publica.asc
-gpg --armor --export 
-gpg --list-secret-keys --keyid-format=long #para listar las llaves privadas hash 
+gpg --version #Displays the installed GPG version
+gpg --full-generate-key #Generates public and private keys
+gpg --list-keys #Show the keys you have in your system
+gpg --armor --export condorjeniffer0@gmail.com > mi_llave_publica.asc #Share your password with other people
+ls mi_llave_publica.asc #Verify that the file exists
+gpg --armor --export condorjeniffer0@gmail.com #Sirve para exportar claves públicas
+gpg --list-secret-keys --keyid-format=long #to list the hash private keys 
 #C970546ABAFA2BE1 
-gpg --armor --export-secret-keys #para especifivar el hash de las llaves
-gpg --import SammyMicompa.asc #importar o compartir llaves 
-gpg --list-keys #listar llaves compartidas
-echo "este mensaje es secreto" > doc_no_cifrado.txt
-ls #listar archivos o mombres
-cat doc_no_cifrado.txt 
-gpg --output doc_cifrado.txt --encrypt --recipient chamorrosamy525@gmail.com doc_no_cifrado.txt #usamos el hash o correo para cifrar el documento
-gpg --out doc_no_cifrado_firmado.txt --clearsing doc_no_cifrado.txt 
-ls
-cat doc_no_cifrado_firmado.txt
-#comandos que me ayudo chatgpt para solucionar el problema que tenia
-echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf #este comando me dio chatgpt para 
-#configurar gpg 
-nano ~/.gnupg/gpg-agent.conf #es para entar o crear un archivo
-pinentry-program /usr/bin/pinentry-curses # este comando le dice a GPG qué programa usar para pedirte la contraseña (passphrase).
-gpgconf --kill gpg-agent #para reiniciar 
-export GPG_TTY=$(tty) #sirve para decirle a GPG en qué terminal (TTY) debe pedirte la contraseña
-gpg --decrypt sammy_doc_cifrado.txt #para cifrar el doc de mi compa
-gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt #It is used to digitally sign a file
-ls #It is used to list files
+gpg --armor --export-secret-keys #to specify the hash of the keys
+gpg --import SammyMicompa.asc #import or share keys
+gpg --list-keys #list shared keys
+echo "este mensaje es secreto" > doc_no_cifrado.txt #It is used to create a text file from the terminal
+ls #list files or names
+cat doc_no_cifrado.txt #Muestra el contenido del archivo
+gpg --output doc_cifrado.txt --encrypt --recipient chamorrosamy525@gmail.com doc_no_cifrado.txt #It is used to encrypt the file. It uses the recipient's public key.
+#Commands that chatgpt helped me to solve the problem I had
+echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf #This command gave me chatgpt to
+#configure gpg
+nano ~/.gnupg/gpg-agent.conf # is for entering or creating a file
+pinentry-program /usr/bin/pinentry-curses # This command tells GPG which program to use to prompt you for your password (passphrase).
+gpgconf --kill gpg-agent #to restart 
+export GPG_TTY=$(tty) #This tells GPG which terminal (TTY) to ask for your password on
+gpg --decrypt sammy_doc_cifrado.txt #to encrypt my friend's doc
+gpg --out doc_no_cifrado_firmado.txt --clearsing doc_no_cifrado.txt #It is used to digitally sign the file
+ls #list files or names
 cat doc_no_cifrado_firmado.txt #It is used to view the contents of the file.
-gpg --verify SammyMicompa_doc_no_cifrado_firmado.txt #Sirve para verificar una firma digital
+gpg --verify SammyMicompa_doc_no_cifrado_firmado.txt #It is used to verify a digital signature.
