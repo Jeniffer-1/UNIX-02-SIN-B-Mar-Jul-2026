@@ -13,7 +13,7 @@ gpg --import SammyMicompa.asc #import or share keys
 gpg --list-keys #list shared keys
 echo "este mensaje es secreto" > doc_no_cifrado.txt #It is used to create a text file from the terminal
 ls #list files or names
-cat doc_no_cifrado.txt #Muestra el contenido del archivo
+cat doc_no_cifrado.txt #Displays the contents of the file
 gpg --output doc_cifrado.txt --encrypt --recipient chamorrosamy525@gmail.com doc_no_cifrado.txt #It is used to encrypt the file. It uses the recipient's public key.
 #Commands that chatgpt helped me to solve the problem I had
 echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf #This command gave me chatgpt to
@@ -33,3 +33,4 @@ gpg --sign-key 23909E79DC4B0DF0 #It is used to sign the public key.
 gpg --verify SammyMicompa_doc_no_cifrado_firmado.txt #It is used to verify a digital signature made with GnuPG.
 gpg --output doc_no_cifrado_firmado_binario.txt --sign doc_no_cifrado.txt #Digitally sign the file and create
 gpg --verify sammymicompa_doc_no_cifrado_firmado_binario.txt #It is used to verify the digital signature of the file.
+gpg --output firma_separada_doc_no_cifrado.sig --detach-sign doc_no_cifrado.txt #It is used to create a digital signature separate from the file.
