@@ -29,3 +29,4 @@ cat doc_no_cifrado_firmado.txt #It is used to view the contents of the file.
 gpg --verify SammyMicompa_doc_no_cifrado_firmado.txt #It is used to verify a digital signature.
 gpg --edit-key chamorrosamy525gmail.com #It is used to edit and manage a GPG key.
 trust #It is used within gpg --edit-key to assign a trust level to a key.
+gpg --sign-key 23909E79DC4B0DF0 #It is used to sign the public key.
