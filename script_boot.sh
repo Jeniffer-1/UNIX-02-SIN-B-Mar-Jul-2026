@@ -7,3 +7,4 @@ cd proyecto/ #change the project direction
 ls -lai #Run it and display the result
 #963663 drwxr-xr-x 2 codespace codespace 4096 Apr  6 12:35 .
 #918515 drwxr-x--- 1 codespace codespace 4096 Apr  6 12:35 ..
+ ~/proyecto $ stat . #View details of the folder you are in
