@@ -2,3 +2,8 @@ cd / #It takes you to the root of the system
 cd /home/codespace #It moves you to a specific route
 cd ~ #It takes you to your personal directory.
 cd $HOME #It does the same thing as a cd ~
+mkdir proyecto #create the project directory
+cd proyecto/ #change the project direction
+ls -la #Run it and display the result
+#drwxr-xr-x 2 codespace codespace 4096 Apr  6 12:35 .
+#drwxr-x--- 1 codespace codespace 4096 Apr  6 12:35 ..
