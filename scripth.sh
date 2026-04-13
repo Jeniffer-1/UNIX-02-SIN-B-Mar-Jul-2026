@@ -6,8 +6,8 @@ ls -a / #Displays all files and folders in the root directory, including hidden 
 #short (-a)
 #long (--all) 
 #is the root directory the main system folder (/)
-ls -l
-ls -a 
-ls -l -a -h
-ls -l -ah
-ls -lah
+ls -l #Lists with details
+ls -a #Includes hidden entries
+ls -l -a -h #Everything, details, readable sizes
+ls -l -ah #Same as the command above
+ls -lah #Same, but shorter
