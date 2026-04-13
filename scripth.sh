@@ -18,3 +18,7 @@ mkdir -- -rf #name directory
 ls #Displays the files and folders in the current directory.
 rmdir -- -rf #deletes empty directories
 ls #Relist the files.
+ls --help #Quick summary (ls)
+man ls #Complete manual
+#To search, press /; to move, use lowercase (n) to move 
+#forward and uppercase (N) to go backward; and to exit, press (q)
