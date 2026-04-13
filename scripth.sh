@@ -11,3 +11,10 @@ ls -a #Includes hidden entries
 ls -l -a -h #Everything, details, readable sizes
 ls -l -ah #Same as the command above
 ls -lah #Same, but shorter
+
+#create directory mkdir -- -rf
+
+mkdir -- -rf #name directory
+ls #Displays the files and folders in the current directory.
+rmdir -- -rf #deletes empty directories
+ls #Relist the files.
