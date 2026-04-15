@@ -46,3 +46,15 @@ cat /etc/archivo_protegido #we see the content
 #result : hola
 echo "hola" | sudo tee /etc/archivo_protegido #Write "hola" in a protected file and also print it on the screen.
 #result: hola
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido' #Append "chao" to the end of the 
+#protected file using administrator privileges.
+cat /etc/archivo_protegido #Display the content of the file
+#result chao
+#chao
+sudo su - #Switch to the root (administrator) 
+#user with a full login environment.
+exit #Exit the current session
+echo "$HOME" #expands the variable
+#result: /home/codespace
+echo '$HOME' #it takes type string
+#result :$HOME
