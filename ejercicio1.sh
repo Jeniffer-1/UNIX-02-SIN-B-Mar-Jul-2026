@@ -20,3 +20,10 @@ ls -l hola.sh #Show the details again to check the permissions.
 ./hola.sh #Run the script.
 #result:
 #hola desde mi primer script
+
+ls /etc #List all the files and folders inside
+
+touch /etc/prueba.txt  #Use sudo to create the file
+mkdir ~/mi_carpeta #“File exists” error means
+apt install cowsay #Install the Cowsay program.
+#You need administrator privileges (sudo).
