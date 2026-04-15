@@ -37,3 +37,12 @@ chmod +x script.sh #Grants execution permission
 chmod u+x script.sh #Grant execution permission only to the user (owner).
 chmod o-r script.sh #Remove read permission for others (or)
 chmod u+rw,go-rwx script.sh #Only the owner has access
+sudo echo "hola" > /etc/archivo_protegido # It doesn't work because another (sudo)
+#command is needed in (/etc/) because it's only on top of (echo).
+#result:bash: /etc/archivo_protegido: Permission denied
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null #The command writes "hola" to a protected system file using administrator privileges,
+#without displaying anything in the terminal.
+cat /etc/archivo_protegido #we see the content
+#result : hola
+echo "hola" | sudo tee /etc/archivo_protegido #Write "hola" in a protected file and also print it on the screen.
+#result: hola
