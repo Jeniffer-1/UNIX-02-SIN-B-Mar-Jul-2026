@@ -128,3 +128,19 @@ sudo chown luna mi_archivo #Changes the owner of mi_archivo to user luna.
 ls -l mi_archivo #Shows detailed info about the file (permissions, owner, group, size, etc.).
 #result:
 #-rw------- 1 luna codespace 5 Apr 27 13:16 mi_archivo
+
+sudo groupadd grupo_test #Creates a group called grupo_test
+sudo usermod -aG grupo_test luna #Adds user luna to group grupo_test
+groups luna #Shows the groups of user luna
+
+sudo useradd -m #luna Creates user luna with home directory
+sudo usermod -aG grupo_test luna #Again adds user to group and checks it
+groups luna #Again adds user to group and checks it
+touch archivo.txt #Creates an empty file called archivo.txt
+sudo chown luna:grupo_test archivo.txt #Changes owner to luna and group to grupo_test
+ls -l archivo.txt #Shows permissions, owner and group of file
+#result:
+#-rw-r--r-- 1 luna grupo_test 0 Apr 27 13:51 archivo.txt
+
+mkdir -p proyecto/sub
+touch proyect/
