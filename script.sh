@@ -60,3 +60,33 @@ echo '$HOME' #it takes type string
 #result :$HOME
 umask #Remove default permissions to make your system more secure.
 #result: 0022
+
+touch archivo1 #Create an empty file called file1
+mkdir directorio1 #Create a folder/directory called
+ls -l #Displays a detailed list of files and folders
+#result: total 20
+#-rw-rw-rw-  1 codespace root         0 Apr 13 12:26 README.md
+#-rw-rw-rw-  1 codespace codespace    0 Apr 27 12:34 archivo1
+#drwxrwxrwx+ 2 codespace codespace 4096 Apr 27 12:34 directorio1
+#-rw-rw-rw-  1 codespace codespace 1010 Apr 15 13:28 ejercicio1.sh
+#-rw-rw-rw-  1 codespace codespace  507 Apr 15 13:39 ejercicio2.sh
+#-rwxrwxrwx  1 codespace codespace   45 Apr 15 13:07 hola.sh
+#-rwxr-xr-x  1 codespace codespace    0 Apr 15 13:34 prueba.txt
+#-rwx------  1 codespace codespace 2594 Apr 27 12:34 script.sh
+
+touch archivo1 #Create an empty file called file2
+mkdir directorio1 #Create a folder/directory called
+ls -l #Displays a detailed list of files and folders
+#result:
+#total 24
+#-rw-rw-rw-  1 codespace codespace    0 Apr 27 12:34 archivo1
+#-rw-rw-rw-  1 codespace codespace    0 Apr 27 12:37 archivo2
+#drwxrwxrwx+ 2 codespace codespace 4096 Apr 27 12:34 directorio1
+#drwxrwxrwx+ 2 codespace codespace 4096 Apr 27 12:38 directorio2
+#-rw-rw-rw-  1 codespace codespace 1010 Apr 15 13:28 ejercicio1.sh
+#-rw-rw-rw-  1 codespace codespace  507 Apr 15 13:39 ejercicio2.sh
+#-rwxrwxrwx  1 codespace codespace   45 Apr 15 13:07 hola.sh
+#-rwxr-xr-x  1 codespace codespace    0 Apr 15 13:34 prueba.txt
+#-rwx------  1 codespace codespace 3275 Apr 27 12:37 script.sh
+
+
