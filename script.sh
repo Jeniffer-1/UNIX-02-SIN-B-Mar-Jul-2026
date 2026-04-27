@@ -58,3 +58,5 @@ echo "$HOME" #expands the variable
 #result: /home/codespace
 echo '$HOME' #it takes type string
 #result :$HOME
+umask #Remove default permissions to make your system more secure.
+#result: 0022
