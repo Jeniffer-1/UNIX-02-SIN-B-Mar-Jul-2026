@@ -58,6 +58,7 @@ echo "$HOME" #expands the variable
 #result: /home/codespace
 echo '$HOME' #it takes type string
 #result :$HOME
+
 umask #Remove default permissions to make your system more secure.
 #result: 0022
 
@@ -89,4 +90,41 @@ ls -l #Displays a detailed list of files and folders
 #-rwxr-xr-x  1 codespace codespace    0 Apr 15 13:34 prueba.txt
 #-rwx------  1 codespace codespace 3275 Apr 27 12:37 script.sh
 
+sudo apt-get update #Updates the list of available packages.
+sudo apt-get upgrade #Upgrades installed packages to newer versions.
+sudo apt-get install acl #Installs ACL (Access Control Lists) support.
+sudo chown -R $(whoami) . #Changes ownership of all files in the current directory (recursively) to your user.
+sudo setfacl -bnR . #Removes all ACLs (extended permissions) from the current directory and its contents.
 
+umask 077 #Sets very restrictive default permissions (only owner can read/write).
+touch secreto.txt #Creates an empty file named secreto.txt.
+mkdir privado  #Creates a directory named privado.
+ls -l #Lists files with detailed information (permissions, owner, etc.).
+#result:
+#total 28
+#-rw-rw-rw- 1 codespace root         0 Apr 13 12:26 README.md
+#-rw-rw-rw- 1 codespace codespace    0 Apr 27 12:34 archivo1
+#-rw-rw-rw- 1 codespace codespace    0 Apr 27 12:37 archivo2
+#drwxrwxrwx 2 codespace codespace 4096 Apr 27 12:34 directorio1
+#drwxrwxrwx 2 codespace codespace 4096 Apr 27 12:38 directorio2
+#-rw-rw-rw- 1 codespace codespace 1010 Apr 15 13:28 ejercicio1.sh
+#-rw-rw-rw- 1 codespace codespace  507 Apr 15 13:39 ejercicio2.sh
+#-rwxrwxrwx 1 codespace codespace   45 Apr 15 13:07 hola.sh
+#drwx------ 2 codespace codespace 4096 Apr 27 12:49 privado
+#-rwxr-xr-x 1 codespace codespace    0 Apr 15 13:34 prueba.txt
+#-rwx------ 1 codespace codespace 4033 Apr 27 12:43 script.sh
+#-rw------- 1 codespace codespace    0 Apr 27 12:49 secreto.txt
+
+umask 0022 #Sets default permissions: new files will be 644
+whoami echo "hola" > mi_archivo #Shows the current user and Creates (or overwrites) a file named mi_archivo and writes “hola”.
+ls -l mi_archivo #Shows detailed info about the file
+#-rw------- 1 codespace codespace 5 Apr 27 13:16 mi_archivo
+umask #It’s a command that shows or sets the default permission mask for new files and directories.
+#result:
+#0022
+
+sudo useradd -m -s /usr/bin/zsh luna #Creates a user named luna, with a home directory (-m) and using zsh as the shell.
+sudo chown luna mi_archivo #Changes the owner of mi_archivo to user luna.
+ls -l mi_archivo #Shows detailed info about the file (permissions, owner, group, size, etc.).
+#result:
+#-rw------- 1 luna codespace 5 Apr 27 13:16 mi_archivo
