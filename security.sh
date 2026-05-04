@@ -1,4 +1,4 @@
-#comands
+#commands
 id #It tells you who you are in the system and what permissions you have.
 #result
 #uid=0(root) gid=0(root) grupos=0(root)
