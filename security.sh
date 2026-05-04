@@ -15,11 +15,32 @@ cat /etc/passwd | head -10 #It shows the first 10 users of the system.
 #mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
 #news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
 cat /etc/group | head -10 #Displays the first 10 groups in the system (from the file where they are saved).
+#result:
+#root:x:0:
+#daemon:x:1:
+#bin:x:2:
+#sys:x:3:
+#adm:x:4:
+#tty:x:5:
+#disk:x:6:
+#lp:x:7:
+#mail:x:8:
+#news:x:9:
 groups #Displays the groups to which the current user belongs.
+#result:
+#root
 groups $USER #Displays the user groups you specify (in this case, your current user using the $USER variable).
+#result:
+#root
 id -u #shows the user ID
+#result:
+#0
 id -g #hows the primary group ID
+#result:
+#0
 id -G #hows the primary group ID
+#result:
+#0
 cat /etc/group #Displays the content of the /etc/group file, which stores all Linux system groups.
 #result:
 #root:x:0:
