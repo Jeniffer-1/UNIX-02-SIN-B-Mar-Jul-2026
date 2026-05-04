@@ -17,10 +17,10 @@ cat /etc/passwd | head -10 #It shows the first 10 users of the system.
 cat /etc/group | head -10 #Displays the first 10 groups in the system (from the file where they are saved).
 groups #Displays the groups to which the current user belongs.
 groups $USER #Displays the user groups you specify (in this case, your current user using the $USER variable).
-id -u
-id -g
-id -G
-cat /etc/group
+id -u #shows the user ID
+id -g #hows the primary group ID
+id -G #hows the primary group ID
+cat /etc/group #Displays the content of the /etc/group file, which stores all Linux system groups.
 #result:
 #root:x:0:
 #daemon:x:1:
@@ -65,10 +65,10 @@ cat /etc/group
 #systemd-network:x:997:
 #debian-tor:x:101:
 #tcpdump:x:996:
-cat /etc/group | grep users
+cat /etc/group | grep users #shows information about the “users” group.
 #result:
 #users:x:100:
-cat /etc/gshadow
+cat /etc/gshadow #displays the file with group passwords and security info
 #result:
 #root:*::
 #daemon:*::
@@ -100,16 +100,22 @@ cat /etc/gshadow
 #irc:*::
 #src:*::
 #shadow:*::
-utmp:*::
-video:*::
-sasl:*::
-plugdev:*::
-staff:*::
-games:*::
-users:*::
-nogroup:*::
-lpadmin:!*::
-systemd-journal:!*::
-systemd-network:!*::
-debian-tor:!::
-tcpdump:!*::
+#utmp:*::
+#video:*::
+#sasl:*::
+#plugdev:*::
+#staff:*::
+#games:*::
+#users:*::
+#nogroup:*::
+#lpadmin:!*::
+#systemd-journal:!*::
+#systemd-network:!*::
+#debian-tor:!::
+#tcpdump:!*::
+mkdir ~/proyecto_unix/ #creates a folder called proyecto_unix in your home directory.
+ls -la ~/proyecto_unix/ #shows the contents of that folder with details.
+#result:
+#total 8
+#drwxr-xr-x 2 root root 4096 may  4 13:38 .
+#drwx------ 1 root root 4096 may  4 13:38 ..
