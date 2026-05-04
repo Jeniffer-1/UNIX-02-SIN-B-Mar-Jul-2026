@@ -14,3 +14,6 @@ cat /etc/passwd | head -10 #It shows the first 10 users of the system.
 #lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
 #mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
 #news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+cat /etc/group | head -10 #Displays the first 10 groups in the system (from the file where they are saved).
+groups #Displays the groups to which the current user belongs.
+groups $USER #Displays the user groups you specify (in this case, your current user using the $USER variable).
