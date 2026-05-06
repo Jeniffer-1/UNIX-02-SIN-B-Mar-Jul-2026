@@ -201,3 +201,7 @@ id root #has temporary_group
 usermod -G desarrolladores root
 #This removes all child groups except developers.
 id root #He lost all the other groups
+
+#restore
+usermod -aG diseno,marketing,grupo_temporal root
+id root #restored
