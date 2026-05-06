@@ -172,3 +172,13 @@ addgroup --gid 2100 marketing
 addgroup --system cache_web
 #verify
 grep "diseno\|marketing\|cache_web" /etc/group
+
+#See which groups the current user belongs to
+groups
+id
+#add user to a group with usermod (low level)
+sudo usermod -aG desarrolladores $USER
+sudo usermod -aG diseno $USER
+#$USER is changed to root
+sudo usermod -aG desarrolladores root
+sudo usermod -aG diseno root
