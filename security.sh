@@ -156,3 +156,11 @@ grep -E "desarrolladores|operaciones|servicios _web" /etc/group
 #View main options
 groupadd --help
 
+#View the range of GIDs in the system.
+grep "GID_MIN\|GID_MAX\|SYS_GIS" /etc/login.defs
+#System groups have GIDs lower than the minimum user GID.
+#In Ubuntu, typically:
+#SYS_GID_MIN              101
+#SYS_GID_MAX              999
+#SUB_GID_MIN                100000
+#SUB_GID_MAX             600100000
