@@ -164,3 +164,11 @@ grep "GID_MIN\|GID_MAX\|SYS_GIS" /etc/login.defs
 #SYS_GID_MAX              999
 #SUB_GID_MIN                100000
 #SUB_GID_MAX             600100000
+
+#addgroup [opcions] name_group
+#create groups with addgroup
+sudo addgroup diseno
+addgroup --gid 2100 marketing
+addgroup --system cache_web
+#verify
+grep "diseno\|marketing\|cache_web" /etc/group
