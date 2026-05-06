@@ -149,3 +149,10 @@ groupadd -g 2000 operaciones #specific GID
 #group system (GID < 100)
 groupadd --system servicios_web
 
+#verify that they were create
+grep "desarrolladores\|operaciones\|servicios_web" /etc/group
+grep -E "desarrolladores|operaciones|servicios _web" /etc/group
+
+#View main options
+groupadd --help
+
