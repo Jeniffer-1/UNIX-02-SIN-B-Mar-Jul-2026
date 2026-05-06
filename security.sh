@@ -140,3 +140,12 @@ ls -la ~/proyecto_unix/ #shows the contents of that folder with details.
 #total 8
 #drwxr-xr-x 2 root root 4096 may  4 13:38 .
 #drwx------ 1 root root 4096 may  4 13:38 ..
+
+#grupadd [opcions] name_group
+#create a simple group
+#when an identifocator is less than 1000, it's am system identificator
+sudo groupadd desarrolladores
+groupadd -g 2000 operaciones #specific GID
+#group system (GID < 100)
+groupadd --system servicios_web
+
