@@ -182,3 +182,12 @@ sudo usermod -aG diseno $USER
 #$USER is changed to root
 sudo usermod -aG desarrolladores root
 sudo usermod -aG diseno root
+
+#check for changes in /etc/group
+grep "desarrolladores\|diseno" /etc/group
+
+#Add user to group with adduser(high level, Debian)
+adduser root marketing
+#View current status
+id root
+grep root /etc/group
