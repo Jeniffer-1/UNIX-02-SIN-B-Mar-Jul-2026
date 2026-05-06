@@ -227,3 +227,10 @@ chgrp diseno \
 ~/lab_chgrp/reportes/informe.txt
 ls -la ~/lab_chgrp/proyectos/
 ls -la ~/lab_chgrp/reportes/
+
+#Recursively change an entire directory
+chgrp -R desarrolladores ~/lab_chgrp/scripts
+ls -laR ~/lab_chgrp/scripts/
+
+#Use verbose to see what changes
+chgrp -Rv diseno ~/lab_chgrp/reportes/
