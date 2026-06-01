@@ -426,19 +426,30 @@ root@localhost:~# exit
 #result                                                         
 #exit                 
 sysadmin@localhost:~$ cd ~/Documents                                            
-sysadmin@localhost:~/Documents$ cat food.txt                                    
+sysadmin@localhost:~/Documents$ cat food.txt    
+#Displays the file contents.
+#result                                
+#Food is good.                                                                   
+sysadmin@localhost:~/Documents$  cat food.txt > newfile1.txt 
+#Copies the contents to another file.                   
+sysadmin@localhost:~/Documents$ cat newfile1.txt  
+#result                              
 Food is good.                                                                   
-sysadmin@localhost:~/Documents$  cat food.txt > newfile1.txt                    
-sysadmin@localhost:~/Documents$ cat newfile1.txt                                
-Food is good.                                                                   
-sysadmin@localhost:~/Documents$ echo "Hello"                                    
-Hello                                                                           
-sysadmin@localhost:~/Documents$ cat newfile1.txt                                
-Food is good.                                                                   
-sysadmin@localhost:~/Documents$ echo "I like food." > newfile1.txt              
-sysadmin@localhost:~/Documents$ cat newfile1.txt                                
-I like food.                                                                    
-sysadmin@localhost:~/Documents$ echo "This food is good." >> newfile1.txt       
-sysadmin@localhost:~/Documents$ cat newfile1.txt                                
-I like food.                                                                    
-This food is good.    
+sysadmin@localhost:~/Documents$ echo "Hello" 
+#Displays text on the screen
+#result                                   
+#Hello                                                                           
+sysadmin@localhost:~/Documents$ cat newfile1.txt   
+#result
+#Food is good.                                                                   
+sysadmin@localhost:~/Documents$ echo "I like food." > newfile1.txt   
+#Overwrites the file with new text           
+sysadmin@localhost:~/Documents$ cat newfile1.txt    
+#result                            
+#I like food.                                                                    
+sysadmin@localhost:~/Documents$ echo "This food is good." >> newfile1.txt      
+#Appends text to the end of the file. 
+sysadmin@localhost:~/Documents$ cat newfile1.txt  
+#result                              
+#I like food.                                                                    
+#This food is good.    
