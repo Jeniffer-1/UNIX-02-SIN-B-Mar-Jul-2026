@@ -228,3 +228,29 @@ sysadmin@localhost:~$ grep 'red'
 #The gril in the red dress had red hair and a matching red bow.                  
 #The horse in the red saddle was bred for racing.                                
 #The horse in the red saddle was bred for racing.  
+sysadmin@localhost:~$ su -                                                      
+#Password: netlab123
+root@localhost:~# shutdown now                                                  
+shutdown: Unable to shutdown system                                             
+root@localhost:~#                                                               
+Broadcast message from sysadmin@localhost                                       
+        (/dev/pts/0) at 1:31 ...                                                
+                                                                                
+The system is going down for maintenance NOW!                                   
+                                                                                
+root@localhost:~# date                                                          
+Mon Jun  1 01:31:50 UTC 2026                                                    
+root@localhost:~#  shutdown 01:51                                               
+                                                                                
+Broadcast message from sysadmin@localhost                                       
+        (/dev/pts/0) at 1:32 ...                                                
+                                                                                
+The system is going down for maintenance in 19 minutes!   
+
+root@localhost:~# shutdown +1 "Goodbye World!"                                  
+                                                                                
+Broadcast message from sysadmin@localhost                                       
+        (/dev/pts/0) at 1:34 ...                                                
+                                                                                
+The system is going down for maintenance in 1 minute!                           
+Goodbye World!
