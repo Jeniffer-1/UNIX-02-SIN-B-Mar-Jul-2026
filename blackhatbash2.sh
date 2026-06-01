@@ -28,3 +28,4 @@ set +x
 #total 4
 #drwxrwxrwx+ 2 root root 4096 jun  1 13:21 myfile
 #+ set +x
+
