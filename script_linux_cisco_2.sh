@@ -261,3 +261,68 @@ root@localhost:~# shutdown +1 "Goodbye World!"
 #       (/dev/pts/0) at 1:34 ...                                                
 #The system is going down for maintenance in 1 minute!                           
 #Goodbye World!
+root@localhost:~# ifconfig   
+#Displays the network interface configuration.
+#reslut                                                   
+#eth0      Link encap:Ethernet  HWaddr 02:42:c0:a8:01:02                         
+#          inet addr:192.168.1.2  Bcast:192.168.1.255  Mask:255.255.255.0        
+#          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1                    
+#          RX packets:30 errors:0 dropped:0 overruns:0 frame:0                   
+#          TX packets:57 errors:0 dropped:0 overruns:0 carrier:0                 
+#          collisions:0 txqueuelen:1000                                          
+#          RX bytes:2216 (2.2 KB)  TX bytes:3722 (3.7 KB)                        
+                                                                                
+#lo        Link encap:Local Loopback                                             
+#          inet addr:127.0.0.1  Mask:255.0.0.0                                   
+#          inet6 addr: ::1/128 Scope:Host                                        
+#          UP LOOPBACK RUNNING  MTU:65536  Metric:1                              
+#          RX packets:0 errors:0 dropped:0 overruns:0 frame:0                    
+#          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0                  
+#          collisions:0 txqueuelen:1000                                          
+#          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)  
+root@localhost:~# ping -c 4 192.168.1.3
+#Sends 4 ICMP packets to test connectivity with 192.168.1.3.
+#reslut                                         
+#PING 192.168.1.3 (192.168.1.3) 56(84) bytes of data.                            
+#From 192.168.1.2 icmp_seq=1 Destination Host Unreachable                        
+#From 192.168.1.2 icmp_seq=2 Destination Host Unreachable                        
+#From 192.168.1.2 icmp_seq=3 Destination Host Unreachable                        
+#From 192.168.1.2 icmp_seq=4 Destination Host Unreachable                        
+                                                                                
+#--- 192.168.1.3 ping statistics ---                                             
+#4 packets transmitted, 0 received, +4 errors, 100% packet loss, time 3059ms     
+#pipe 4                             
+root@localhost:~# exit    
+#Closes the current session or exits the current user.
+#result                                                      
+#logout
+sysadmin@localhost:~$ ps  
+#Displays processes running in the current terminal.
+#result                                                      
+#    PID TTY          TIME CMD                                                   
+#     83 pts/0    00:00:00 bash                                                  
+#    139 pts/0    00:00:00 ps 
+sysadmin@localhost:~$ ps -e  
+#Displays all active processes on the system.
+#result                                                   
+#    PID TTY          TIME CMD                                                   
+#      1 pts/0    00:00:00 init                                                  
+#     13 ?        00:00:00 rsyslogd                                              
+#     17 ?        00:00:00 cron                                                  
+#     19 ?        00:00:00 sshd                                                  
+#     36 ?        00:00:00 named                                                 
+#     73 pts/0    00:00:00 login                                                 
+#     83 pts/0    00:00:00 bash                                                  
+#    140 pts/0    00:00:00 ps                                                    
+sysadmin@localhost:~$ ps -ef           
+#Displays detailed information about all processes.                                         
+#result
+#UID          PID    PPID  C STIME TTY          TIME CMD                         
+#root           1       0  0 00:45 pts/0    00:00:00 /sbin??? /init              
+#syslog        13       1  0 00:45 ?        00:00:00 /usr/sbin/rsyslogd          
+#root          17       1  0 00:45 ?        00:00:00 /usr/sbin/cron              
+#root          19       1  0 00:45 ?        00:00:00 /usr/sbin/sshd              
+#bind          36       1  0 00:45 ?        00:00:00 /usr/sbin/named -u bind     
+#root          73       1  0 00:45 pts/0    00:00:00 /bin/login -f               
+#sysadmin      83      73  0 00:45 pts/0    00:00:00 -bash                       
+#sysadmin     141      83  0 02:41 pts/0    00:00:00 ps -ef  
