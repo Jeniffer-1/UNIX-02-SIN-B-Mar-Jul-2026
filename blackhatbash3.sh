@@ -3,6 +3,7 @@ set -x
 book="black hat bash"
 echo "This book's name is ${book}"
 echo "this book's name is $book"
+#bash -x blackhatbash3.sh
 set +x
 
 root_directory=$(ls -ld /)
