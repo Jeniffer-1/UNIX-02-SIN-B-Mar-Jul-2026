@@ -326,3 +326,46 @@ sysadmin@localhost:~$ ps -ef
 #root          73       1  0 00:45 pts/0    00:00:00 /bin/login -f               
 #sysadmin      83      73  0 00:45 pts/0    00:00:00 -bash                       
 #sysadmin     141      83  0 02:41 pts/0    00:00:00 ps -ef  
+sysadmin@localhost:~$ sudo apt-get update  
+#Updates the list of available packages from configured repositories. 
+#It does not install software; it only updates package information.
+#result                                     
+#[sudo] password for sysadmin:                                                   
+#Ign file: amd64/ InRelease                                                      
+#Ign file: amd64/ Release.gpg                                                    
+#Ign file: amd64/ Release                                                        
+#Reading package lists... Done                                                   
+sysadmin@localhost:~$ apt-cache search cow   
+#Searches for packages related to the word cow.                                   
+#result
+#cowsay - configurable talking cow                                               
+sysadmin@localhost:~$ sudo apt-get install cowsay   
+#Installs the cowsay package on the system.                            
+#result
+#Reading package lists... Done                                                   
+#Building dependency tree                                                        
+#Reading state information... Done                                               
+#Suggested packages:                                                             
+#  filters                                                                       
+#The following NEW packages will be installed:  
+# cowsay                                                                        
+#0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.                  
+#Need to get 0 B/18.5 kB of archives.                                            
+#After this operation, 90.1 kB of additional disk space will be used.            
+#Selecting previously unselected package cowsay.                                 
+#(Reading database ... 24300 files and directories currently installed.)         
+#Preparing to unpack .../cowsay_3.03+dfsg1-6_all.deb ...                         
+#Unpacking cowsay (3.03+dfsg1-6) ...                                             
+#Processing triggers for man-db (2.6.7.1-1ubuntu1) ...                           
+#Setting up cowsay (3.03+dfsg1-6) ...  
+sysadmin@localhost:~$ cowsay 'NDG Linux Unhatched'
+#Displays a cow saying "NDG Linux Unhatched".
+#result                              
+# _____________________                                                          
+#< NDG Linux Unhatched >                                                         
+# ---------------------                                                          
+#        \   ^__^                                                                
+#         \  (oo)\_______                                                        
+#            (__)\       )\/\                                                    
+#                ||----w |                                                       
+#                ||     ||    
