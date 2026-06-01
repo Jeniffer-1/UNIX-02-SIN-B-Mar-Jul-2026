@@ -53,3 +53,9 @@ sysadmin@localhost:~/Documents$ ls Work
 #The Work directory was successfully deleted.
 #result                                        
 #ls: cannot access Work: No such file or directory 
+sysadmin@localhost:~/Documents$ cp /etc/passwd .  
+#Copies the /etc/passwd file to the current directory (.).                              
+sysadmin@localhost:~/Documents$ grep sysadmin passwd
+#Searches for the word sysadmin inside the passwd file you just copied. 
+#result                           
+#sysadmin:x:1001:1001:System Administrator,,,,:/home/sysadmin:/bin/bash 
