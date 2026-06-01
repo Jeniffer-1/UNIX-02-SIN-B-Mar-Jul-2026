@@ -453,3 +453,5 @@ sysadmin@localhost:~/Documents$ cat newfile1.txt
 #result                              
 #I like food.                                                                    
 #This food is good.    
+sysadmin@localhost:~$ vi newfile.txt 
+#It is used to create and edit text files directly from the terminal.
