@@ -228,29 +228,36 @@ sysadmin@localhost:~$ grep 'red'
 #The gril in the red dress had red hair and a matching red bow.                  
 #The horse in the red saddle was bred for racing.                                
 #The horse in the red saddle was bred for racing.  
-sysadmin@localhost:~$ su -                                                      
+sysadmin@localhost:~$ su -
+#Switches to the root user (superuser) and loads the full root environment.                                                      
 #Password: netlab123
-root@localhost:~# shutdown now                                                  
-shutdown: Unable to shutdown system                                             
+root@localhost:~# shutdown now   
+#Shuts down the system immediately  
+#resutl                                             
+#shutdown: Unable to shutdown system                                             
 root@localhost:~#                                                               
-Broadcast message from sysadmin@localhost                                       
-        (/dev/pts/0) at 1:31 ...                                                
+#Broadcast message from sysadmin@localhost                                       
+#        (/dev/pts/0) at 1:31 ...                                                
                                                                                 
-The system is going down for maintenance NOW!                                   
+#The system is going down for maintenance NOW!                                   
                                                                                 
-root@localhost:~# date                                                          
-Mon Jun  1 01:31:50 UTC 2026                                                    
-root@localhost:~#  shutdown 01:51                                               
+root@localhost:~# date       
+#Displays the current system date and time.
+#result                                                   
+#Mon Jun  1 01:31:50 UTC 2026                                                    
+root@localhost:~#  shutdown 01:51 
+#Schedules the system shutdown for 01:51.                                    
+#result                                                      
+#Broadcast message from sysadmin@localhost                                       
+#        (/dev/pts/0) at 1:32 ...                                                
                                                                                 
-Broadcast message from sysadmin@localhost                                       
-        (/dev/pts/0) at 1:32 ...                                                
-                                                                                
-The system is going down for maintenance in 19 minutes!   
+#The system is going down for maintenance in 19 minutes!   
 
-root@localhost:~# shutdown +1 "Goodbye World!"                                  
-                                                                                
-Broadcast message from sysadmin@localhost                                       
-        (/dev/pts/0) at 1:34 ...                                                
-                                                                                
-The system is going down for maintenance in 1 minute!                           
-Goodbye World!
+root@localhost:~# shutdown +1 "Goodbye World!"   
+#Schedules a shutdown in 1 minute and sends the custom message
+#"Goodbye World!" to logged-in users.                               
+#result                                                                               
+#Broadcast message from sysadmin@localhost                                       
+#       (/dev/pts/0) at 1:34 ...                                                
+#The system is going down for maintenance in 1 minute!                           
+#Goodbye World!
