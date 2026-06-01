@@ -369,3 +369,76 @@ sysadmin@localhost:~$ cowsay 'NDG Linux Unhatched'
 #            (__)\       )\/\                                                    
 #                ||----w |                                                       
 #                ||     ||    
+sysadmin@localhost:~$ sudo apt-get update 
+#Updates the package list.
+#result                                      
+#Ign file: amd64/ InRelease                                                      
+#Ign file: amd64/ Release.gpg                                                    
+#Ign file: amd64/ Release                                                        
+#Reading package lists... Done                                                   
+sysadmin@localhost:~$ sudo apt-get upgrade      
+#Upgrades installed packages.
+#result                                
+#Reading package lists... Done                                                   
+#Building dependency tree                                                        
+#Reading state information... Done                                               
+#Calculating upgrade... Done                                                     
+#0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.                  
+sysadmin@localhost:~$ sudo apt-get purge cowsay 
+#Completely removes cowsay.  
+#result                              
+#Reading package lists... Done                                                   
+#Building dependency tree                                                        
+#Reading state information... Done                                               
+#The following packages will be REMOVED:                                         
+#  cowsay*                                                                       
+#0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.                  
+#After this operation, 90.1 kB disk space will be freed.                         
+#Do you want to continue? [Y/n] Y                                                
+#(Reading database ... 24364 files and directories currently installed.)         
+#Removing cowsay (3.03+dfsg1-6) ...                                              
+#Processing triggers for man-db (2.6.7.1-1ubuntu1) ...   
+sysadmin@localhost:~$ passwd 
+#Changes the password of the current user (sysadmin).
+#result                                                   
+#Changing password for sysadmin.                                                 
+#(current) UNIX password:                                                        
+#Enter new UNIX password:                                                        
+#Retype new UNIX password:                                                       
+#passwd: password updated successfully                                           
+sysadmin@localhost:~$ passwd -S sysadmin  
+#Displays password status information for the user.
+#result                                      
+#sysadmin P 06/01/2026 0 99999 7 -1   
+sysadmin@localhost:~$ su root
+#Switches to the root user (system administrator).
+#You now have administrative privileges. 
+#result                                                  
+#Password:                                                                       
+root@localhost:~# passwd sysadmin  
+#You exit root and return to sysadmin.
+#result                                             
+#Enter new UNIX password:                                                        
+#Retype new UNIX password:                                                       
+#passwd: password updated successfully                                           
+root@localhost:~# exit  
+#Exits the current session.
+#result                                                         
+#exit                 
+sysadmin@localhost:~$ cd ~/Documents                                            
+sysadmin@localhost:~/Documents$ cat food.txt                                    
+Food is good.                                                                   
+sysadmin@localhost:~/Documents$  cat food.txt > newfile1.txt                    
+sysadmin@localhost:~/Documents$ cat newfile1.txt                                
+Food is good.                                                                   
+sysadmin@localhost:~/Documents$ echo "Hello"                                    
+Hello                                                                           
+sysadmin@localhost:~/Documents$ cat newfile1.txt                                
+Food is good.                                                                   
+sysadmin@localhost:~/Documents$ echo "I like food." > newfile1.txt              
+sysadmin@localhost:~/Documents$ cat newfile1.txt                                
+I like food.                                                                    
+sysadmin@localhost:~/Documents$ echo "This food is good." >> newfile1.txt       
+sysadmin@localhost:~/Documents$ cat newfile1.txt                                
+I like food.                                                                    
+This food is good.    
