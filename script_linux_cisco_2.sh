@@ -59,3 +59,172 @@ sysadmin@localhost:~/Documents$ grep sysadmin passwd
 #Searches for the word sysadmin inside the passwd file you just copied. 
 #result                           
 #sysadmin:x:1001:1001:System Administrator,,,,:/home/sysadmin:/bin/bash 
+sysadmin@localhost:~/Documents$ grep sysadmin passwd  
+#Searches for "sysadmin" in the passwd file.
+#result                          
+#sysadmin:x:1001:1001:System Administrator,,,,:/home/sysadmin:/bin/bash          
+sysadmin@localhost:~/Documents$  grep 'root' passwd  
+#Searches for all lines containing the word root.
+#result                           
+#root:x:0:0:root:/root:/bin/bash                                                 
+#operator:x:1000:37::/root:                                                      
+sysadmin@localhost:~/Documents$ grep '^root' /etc/passwd    
+#^ means "beginning of line". Searches for lines that start with root.                    
+#result
+#root:x:0:0:root:/root:/bin/bash                                                 
+sysadmin@localhost:~/Documents$ cat alpha-first.txt 
+#Displays the contents of a file. 
+#result                           
+#A is for Animal                                                                 
+#B is for Bear                                                                   
+#C is for Cat                                                                    
+#D is for Dog                                                                    
+#E is for Elephant                                                               
+#F is for Flower                                                                 
+sysadmin@localhost:~/Documents$  grep 'r$' alpha-first.txt
+#$ means "end of line". Searches for lines ending with the letter r.                      
+#result
+#B is for Bear                                                                   
+#F is for Flower 
+sysadmin@localhost:~/Documents$ cat red.txt 
+#Displays the entire contents of the red.txt file.  
+#result                                  
+#red                                                                             
+#reef                                                                            
+#rot                                                                             
+#reeed                                                                           
+#rd                                                                              
+#rod                                                                             
+#roof                                                                            
+#reed                                                                            
+#root                                                                            
+#reel                                                                            
+#read                                                                            
+sysadmin@localhost:~/Documents$ grep 'r..f' red.txt  
+#Searches for patterns with two characters between r and f.                           
+#result
+#reef                                                                            
+#roof                                                                            
+sysadmin@localhost:~/Documents$ grep 'r..d' red.txt  
+#Searches for patterns with two characters between r and d.                           
+#result
+#reed                                                                            
+#read                                                                            
+sysadmin@localhost:~/Documents$ grep '....' red.txt    
+#Searches for lines with at least four characters.                         
+#result
+#reef                                                                            
+#reeed                                                                           
+#roof                                                                            
+#reed                                                                            
+#root                                                                            
+#reel                                                                            
+#read                                                                            
+sysadmin@localhost:~/Documents$ grep 'r..t' /etc/passwd   
+#It is used to search for specific patterns using regular expressions inside files.                      
+#result
+#root:x:0:0:root:/root:/bin/bash                                                 
+#operator:x:1000:37::/root:                                 
+sysadmin@localhost:~/Documents$ cat profile.txt   
+#Displays the entire contents of the profile.txt file.      
+#result                         
+#Hello my name is Joe.                                                           
+#I am 37 years old.                                                              
+#3121991                                                                         
+#My favorite food is avocados.                                                   
+#I have 2 dogs.                                                                  
+#123456789101112                                                                 
+sysadmin@localhost:~/Documents$  grep '[0-9]' profile.txt
+#Searches for lines containing numbers.
+#result                        
+#I am 37 years old.                                                              
+#3121991                                                                         
+#I have 2 dogs.                                                                  
+#123456789101112                                                                 
+sysadmin@localhost:~/Documents$ grep '[^0-9]' profile.txt
+#Searches for lines containing non-numeric characters.
+#result                        
+#Hello my name is Joe.                                                           
+#I am 37 years old.                                                              
+#My favorite food is avocados.                                                   
+#I have 2 dogs.                                                                  
+#sysadmin@localhost:~/Documents$ grep '[.]' profile.txt                          
+#Hello my name is Joe.                                                           
+#I am 37 years old.                                                              
+#My favorite food is avocados.                                                   
+#I have 2 dogs.                                 
+sysadmin@localhost:~/Documents$ cat red.txt
+#Displays the entire contents of the red.txt file.       
+#result                               
+#red                                                                             
+#reef                                                                            
+#rot                                                                             
+#reeed                                                                           
+#rd                                                                              
+#rod                                                                             
+#roof                                                                            
+#reed                                                                            
+#root                                                                            
+#reel                                                                            
+#read 
+sysadmin@localhost:~/Documents$ grep 're*d' red.txt    
+#Searches for r followed by zero or more e and ending with d.
+#result                          
+#red                                                                             
+#reeed                                                                           
+#rd                                                                              
+#reed                                                                            
+sysadmin@localhost:~/Documents$ grep 'r[oe]*d' red.txt 
+#Searches for r, followed by o or e, ending with d.
+#result                          
+#red                                                                             
+#reeed                                                                           
+#rd                                                                              
+#rod                                                                             
+#reed                                                                            
+sysadmin@localhost:~/Documents$ grep 'z*' red.txt 
+#Searches for r, followed by o or e, ending with d.      
+#result                 
+#red                                                                             
+#reef                                                                            
+#rot                                                                             
+#reeed                                                                           
+#rd                                                                              
+#rod                                                                             
+#roof                                                                            
+#reed                                                                            
+#reed                                                                            
+#root                                                                            
+#reel                                                                            
+#read                                                                            
+sysadmin@localhost:~/Documents$ grep 'e*' red.txt  
+#Searches for lines with zero or more e characters.
+#result                              
+#red                                                                             
+#reef                                                                            
+#rot                                                                             
+#reeed                                                                           
+#rd                                                                              
+#rod                                                                             
+#roof                                                                            
+#reed                                                                            
+#root                                                                            
+#reel                                                                            
+#read                                                                            
+sysadmin@localhost:~/Documents$ grep 'ee*' red.txt 
+#Searches for one e followed by zero or more e characters.
+#result                              
+#red                                                                             
+#reef                                                                            
+#reeed                                                                           
+#reed                                           
+#reel                                                                            
+#read  
+sysadmin@localhost:~$ grep 'red'     
+#grep searches for the word or pattern "red". However, 
+#this command is incomplete because no file was specified.
+#result                                           
+#The gril in the red dress had red hair and a matching red bow.                  
+#The gril in the red dress had red hair and a matching red bow.                  
+#The horse in the red saddle was bred for racing.                                
+#The horse in the red saddle was bred for racing.  
