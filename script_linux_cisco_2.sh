@@ -37,3 +37,19 @@ sysadmin@localhost:~/Documents$ ls
 #Work             alpha-third.txt   linux.txt     profile.txt                    
 #adjectives.txt   food.txt          longfile.txt  red.txt                        
 #alpha-first.txt  hello.sh          newhome.txt   zoo.txt  
+sysadmin@localhost:~/Documents$ rm linux.txt  
+#Deletes the file linux.txt.                                  
+sysadmin@localhost:~/Documents$ ls linux.txt 
+#The file no longer exists because it was deleted.
+#result                                   
+#ls: cannot access linux.txt: No such file or directory                          
+sysadmin@localhost:~/Documents$ rm Work 
+#rm cannot delete directories by itself.                                        
+#result
+#rm: cannot remove 'Work': Is a directory                                        
+sysadmin@localhost:~/Documents$ rm -r Work 
+#Deletes the Work directory and everything inside it.                                     
+sysadmin@localhost:~/Documents$ ls Work 
+#The Work directory was successfully deleted.
+#result                                        
+#ls: cannot access Work: No such file or directory 
