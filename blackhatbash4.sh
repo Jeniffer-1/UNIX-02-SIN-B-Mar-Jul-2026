@@ -15,5 +15,14 @@ echo ${result}
 #+ echo 25
 #25
 #+ set +x
+
+result=$(expr 5 + 505)
+echo ${result}
+#resul
+#++ expr 5 + 505
+#+ result=510
+#+ echo 510
+#510
+#+ set +x
 set +x
 
