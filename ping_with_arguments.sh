@@ -13,3 +13,9 @@ ping -c 3 "${TARGET}"
 echo "The arguments are: $@"
 echo "The total number of arguments is: $#"
 
+ ./ping_with_arguments.sh "1" "2" "3"
+
+# Change "$@" to "$*" to observe behavior.
+for args in "$@"; do
+ echo "${args}"
+done
