@@ -27,3 +27,5 @@ git clone --depth 1 https://github.com/torvalds/linux.git
 cd linux 
 make menuconfig
 make -j 2
+
+![alt text](image-1.png)
