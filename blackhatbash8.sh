@@ -19,3 +19,13 @@ sed - i 's/Mozilla/Godzilla/g' log.txt
 grep "Godzilla" log.txt
 
 sed 's/ //g' log.txt
+
+sed '1d' log.txt > newlog.txt
+
+sed '$d' newlog.txt > newlog1.txt
+
+sed '5,7d' log.txt  > newlog57.txt
+
+sed -n '2,15 p' log.txt
+
+sed -i '1d' log.txt
