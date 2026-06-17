@@ -67,3 +67,5 @@ nohup ./ejercicio2.sh &
 #result
 #[1] 29723
 #se descarta la entrada y se añade la salida a 'nohup.out'
+
+
