@@ -55,3 +55,15 @@ fg %1
 bg %1
 #result
 #[1]+ sleep 100 &
+
+nohup ./ejercicio2.sh &
+#[1] 28684
+#nohup: se descarta la entrada y se añade la salida a 'nohup.out'
+#nohup: fallo al ejecutar la orden './ejercicio2.sh': Permiso denegado
+#[1]+  Salida 126                 nohup ./ejercicio2.sh
+
+chmod +x ejercicio2.sh
+nohup ./ejercicio2.sh &
+#result
+#[1] 29723
+#se descarta la entrada y se añade la salida a 'nohup.out'
