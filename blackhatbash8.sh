@@ -29,3 +29,19 @@ sed '5,7d' log.txt  > newlog57.txt
 sed -n '2,15 p' log.txt
 
 sed -i '1d' log.txt
+
+sleep 100 &
+#result
+#[1] 23316
+
+ps -ef | grep sleep
+#result
+#root           1       0  0 12:14 ?        00:00:00 /bin/sh -c echo Container started trap "exit 0" 15  exec "$@" while sleep 1 & wait $!; do :; done -
+#root       23316     798  0 13:10 pts/0    00:00:00 sleep 100
+#root       23443   23439  0 13:11 ?        00:00:00 sleep 1
+#root       23444       1  0 13:11 ?        00:00:00 sleep 1
+#root       23447     798  0 13:11 pts/0    00:00:00 grep --color=auto sleep
+
+jobs
+#result
+#[1]+  Ejecutando                 sleep 100 &
